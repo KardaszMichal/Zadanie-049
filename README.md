@@ -104,17 +104,17 @@ Użyj Angular CLI, aby wygenerować szkielety potrzebnych elementów.
 
 #### Backend (`server.js`)
 
-- **Co:** Zaimportuj biblioteki (`express`, `session`, `bcrypt`, `cors`, `fs`). Skonfiguruj `cors` i middleware `express.json()` oraz `express-session`.
+- **Co:** Zaimportuj biblioteki (`express`, `session`, `cookieParser`, `cors`, `fs`). Skonfiguruj `cors` i middleware `express.json()` oraz `express-session`.
 - **Dlaczego:** Przygotowuje to serwer do parsowania danych JSON, obsługi sesji i zezwalania na żądania z frontendu.
 
 - **Endpoint `POST /auth/register`:**
 
-  - **Co:** Odczytuje `users.json`, sprawdza, czy użytkownik już istnieje. Jeśli nie, haszuje hasło za pomocą `bcrypt.hash()` i zapisuje nowego użytkownika do pliku.
-  - **Dlaczego:** Zapewnia bezpieczną rejestrację, unikając przechowywania haseł w formie jawnej.
+  - **Co:** Odczytuje `users.json`, sprawdza, czy użytkownik już istnieje. Jeśli nie zapisuje nowego użytkownika do pliku.
+  - **Dlaczego:** Zapewnia rejestrację danych użytkowników.
 
 - **Endpoint `POST /auth/login`:**
 
-  - **Co:** Wyszukuje użytkownika po loginie. Jeśli istnieje, porównuje hasło z hashem w bazie za pomocą `bcrypt.compare()`. Po poprawnym logowaniu, dane użytkownika są zapisywane w `req.session`.
+  - **Co:** Wyszukuje użytkownika po loginie. Po poprawnym logowaniu, dane użytkownika są zapisywane w `req.session`.
   - **Dlaczego:** Weryfikuje tożsamość użytkownika i rozpoczyna sesję, która będzie identyfikowana przez ciasteczko w przeglądarce.
 
 - **Endpoint `GET /api/user`:**
@@ -158,7 +158,7 @@ Użyj Angular CLI, aby wygenerować szkielety potrzebnych elementów.
 
     ```bash
     cd backend
-    node server.js
+    node --watch server.js
     ```
 
 2.  **Uruchom serwer frontend:**
