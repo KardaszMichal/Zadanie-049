@@ -31,6 +31,7 @@ Poniżej znajduje się instrukcja krok po kroku, jak odtworzyć ten projekt.
 
 - Zainstalowany [Node.js](https://nodejs.org/)
 - Zainstalowany [Angular CLI](https://angular.dev/tools/cli): `npm install -g @angular/cli`
+- Zainstalowany [Mózg](https://www.youtube.com/watch?v=LyFMMToEH8M)
 
 ### Krok 1: Inicjalizacja Projektu Backendowego
 
