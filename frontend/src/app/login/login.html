@@ -1,0 +1,23 @@
+<!-- Kontener główny strony logowania -->
+<div class="container m-5">
+    <h1 class="mb-5">Zaloguj się</h1>
+
+    <!-- Formularz logowania powiązany z loginForm w komponencie -->
+    <form (submit)="onSubmit()" [formGroup]="loginForm">
+        <!-- Pole na login -->
+        <div class="mb-3">
+            <label for="login" class="form-label">Login:</label>
+            <input type="text" class="form-control" id="login" formControlName="login">
+        </div>
+        <!-- Pole na hasło -->
+        <div class="mb-3">
+            <label for="password" class="form-label">Hasło:</label>
+            <input type="password" class="form-control" formControlName="password" id="password">
+        </div>
+        <!-- Przycisk do wysłania formularza -->
+        <button type="submit" class="btn btn-primary">Zaloguj się</button>
+    </form>
+
+    <!-- Link do strony rejestracji dla nowych użytkowników -->
+    <p class="mt-4">Nie masz jeszcze konta? <a routerLink="/register">Zarejestruj się</a>.</p>
+</div>

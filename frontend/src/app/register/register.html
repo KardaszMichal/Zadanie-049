@@ -1,0 +1,34 @@
+<!-- Kontener główny strony rejestracji -->
+<div class="container m-5">
+    <!-- Poprawiony nagłówek -->
+    <h1 class="mb-5">Zarejestruj się</h1>
+
+    <!-- Formularz rejestracji powiązany z loginForm w komponencie -->
+    <form [formGroup]="loginForm" (submit)="onSubmit()">
+        <!-- Pole na imię -->
+        <div class="mb-3">
+            <label for="name" class="form-label">Imię:</label>
+            <input type="text" class="form-control" id="name" formControlName="name">
+        </div>
+        <!-- Pole na nazwisko -->
+        <div class="mb-3">
+            <label for="surname" class="form-label">Nazwisko:</label>
+            <input type="text" class="form-control" id="surname" formControlName="surname">
+        </div>
+        <!-- Pole na login -->
+        <div class="mb-3">
+            <label for="login" class="form-label">Login:</label>
+            <input type="text" class="form-control" id="login" formControlName="login">
+        </div>
+        <!-- Pole na hasło -->
+        <div class="mb-3">
+            <label for="password" class="form-label">Hasło:</label>
+            <input type="password" class="form-control" id="password" formControlName="password">
+        </div>
+        <!-- Przycisk do wysłania formularza -->
+        <button type="submit" class="btn btn-primary">Zarejestruj się</button>
+    </form>
+
+    <!-- Link do strony logowania dla użytkowników, którzy mają już konto -->
+    <p class="mt-4">Masz już konto? <a routerLink="/login">Zaloguj się</a>.</p>
+</div>

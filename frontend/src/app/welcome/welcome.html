@@ -1,0 +1,19 @@
+<!-- Blok wyświetlany tylko wtedy, gdy dane użytkownika (sygnał user) są dostępne -->
+@if (user(); as loggedInUser) {
+<div class="container m-4">
+    <!-- Powitanie użytkownika z imieniem i nazwiskiem -->
+    <h2>Witaj, {{ loggedInUser.firstName }} {{ loggedInUser.lastName }}</h2>
+
+    <!-- Blok warunkowy sprawdzający datę ostatniego logowania -->
+    @if (loggedInUser.lastLogged) {
+    <!-- Wyświetla datę ostatniej aktywności, formatowaną przez pipe 'date' -->
+    <p>Ostatnia aktywność: {{ loggedInUser.lastLogged | date:'yyyy-MM-dd HH:mm:ss' }}</p>
+    } @else {
+    <!-- Komunikat dla użytkowników logujących się po raz pierwszy -->
+    <p>Witaj po raz pierwszy!</p>
+    }
+
+    <!-- Przycisk wylogowania -->
+    <button (click)="logout()" class="btn btn-primary">Wyloguj</button>
+</div>
+}

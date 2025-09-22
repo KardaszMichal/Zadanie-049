@@ -1,0 +1,13 @@
+1<!--
+  <router-outlet> to kluczowy element routera Angulara.
+
+  Działanie:
+  Działa jak dynamiczny kontener (placeholder). W tym miejscu Angular będzie renderował
+  komponenty, które są przypisane do aktualnie aktywnej ścieżki (URL) w konfiguracji routingu (app.routes.ts).
+
+  Konieczność użycia:
+  Jest to niezbędne do działania mechanizmu routingu w aplikacji jednostronicowej (SPA).
+  Bez <router-outlet>, aplikacja nie wiedziałaby, gdzie wyświetlać komponenty
+  dla poszczególnych "podstron" (np. /login, /register, /welcome).
+-->
+<router-outlet></router-outlet>

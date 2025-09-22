@@ -1,0 +1,29 @@
+# Pliki generowane przez system operacyjny i edytory
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log
+yarn-error.log
+
+# Ustawienia specyficzne dla IDE
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Zależności
+# Ignoruj wszystkie katalogi node_modules w projekcie
+node_modules/
+
+# Pliki tymczasowe i zbudowane aplikacje (Angular)
+.angular/cache
+dist/
+tmp/
+out-tsc/
+coverage/
+
+# Pliki danych, które nie powinny być wersjonowane
+# Plik users.json może zawierać dane użytkowników
+backend/users.json
