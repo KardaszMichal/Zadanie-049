@@ -44,7 +44,7 @@ Poniżej znajduje się instrukcja krok po kroku, jak odtworzyć ten projekt.
     npm init -y
     ```
 
-    **Wyjaśnienie:** `npm init -y` tworzy domyślny plik `package.json`, który zarządza zależnościami i skryptami projektu. `type nul` tworzy nam pusty plik z rozszerzeniem .js. *Kolejność kroków ma znaczenie*, gdy dodamy plik server.js przed zainicjowaniem projektu, utworzymy skrypt w `package.json` o nazwie `start`. Będzie on miał przypisaną komendę `node server.js`. Komendę możemy rozszerzyć o flagę `--watch` dzięki której nasz serwer będzie się odświeżał po zapisaniu zmian w pliku. Aby uruchomić skrypt do konsoli (skrót: ```CTR+` ```) wpisujemy komendę:
+    **Wyjaśnienie:** `npm init -y` tworzy domyślny plik `package.json`, który zarządza zależnościami i skryptami projektu. `type nul` tworzy nam pusty plik z rozszerzeniem .js. **Kolejność kroków ma znaczenie**, gdy dodamy plik server.js przed zainicjowaniem projektu, utworzymy skrypt w `package.json` o nazwie `start`. Będzie on miał przypisaną komendę `node server.js`. Komendę możemy rozszerzyć o flagę `--watch` dzięki której nasz serwer będzie się odświeżał po zapisaniu zmian w pliku. Aby uruchomić skrypt do konsoli (skrót: ```CTR+` ```) wpisujemy komendę:
 
     ```bash
     npm run start
