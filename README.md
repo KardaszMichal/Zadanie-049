@@ -35,15 +35,20 @@ Poniżej znajduje się instrukcja krok po kroku, jak odtworzyć ten projekt.
 
 ### Krok 1: Inicjalizacja Projektu Backendowego
 
-1.  **Stwórz folder i zainicjuj projekt npm:**
+1.  **Stwórz plik i folder oraz zainicjuj projekt npm:**
 
     ```bash
     mkdir backend
     cd backend
+    type nul > server.js
     npm init -y
     ```
 
-    **Wyjaśnienie:** `npm init -y` tworzy domyślny plik `package.json`, który zarządza zależnościami i skryptami projektu.
+    **Wyjaśnienie:** `npm init -y` tworzy domyślny plik `package.json`, który zarządza zależnościami i skryptami projektu. `type nul` tworzy nam pusty plik z rozszerzeniem .js. *Kolejność kroków ma znaczenie*, gdy dodamy plik server.js przed zainicjowaniem projektu, utworzymy skrypt w `package.json` o nazwie `start`. Będzie on miał przypisaną komendę `node server.js`. Komendę możemy rozszerzyć o flagę `--watch` dzięki której nasz serwer będzie się odświeżał po zapisaniu zmian w pliku. Aby uruchomić skrypt do konsoli (skrót: ```CTR+` ```) wpisujemy komendę:
+
+    ```bash
+    npm run start
+    ```
 
 2.  **Zainstaluj potrzebne zależności:**
 
@@ -58,7 +63,7 @@ Poniżej znajduje się instrukcja krok po kroku, jak odtworzyć ten projekt.
     - `cookie-parser`: Middleware do zarządzania ciastkami.
     - `cors`: Middleware pozwalające na żądania z innej domeny (niezbędne do komunikacji między frontendem na porcie 4200 a backendem na porcie 3000).
 
-3.  **Stwórz pliki `server.js` oraz `users.json`.**
+3.  **Dodaj / Stwórz plik `users.json`.**
 
 ### Krok 2: Inicjalizacja Projektu Frontendowego
 
